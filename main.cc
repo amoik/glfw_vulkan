@@ -1,6 +1,4 @@
 #include <iostream>
-#include <unistd.h>
-#include <vulkan/vulkan.h>
 
 #include "Window.class.hh"
 
@@ -17,9 +15,9 @@ int main ( int ac, char **av )
 	{
 		win.run ();
 	}
-	catch ( const std::runtime_error &e )
+	catch ( const runtime_error &e )
 	{
-		std::cerr << e.what () << std::endl;
+		cerr << e.what () << endl;
 		return EXIT_FAILURE;
 	}
 
