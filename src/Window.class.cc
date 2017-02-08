@@ -1,5 +1,8 @@
 #include "Window.class.hh"
 
+#define STB_IMAGE_IMPLEMENTATION
+#include <stb_image.h>
+
 void Window::run ()
 {
 	initWindow ();
