@@ -39,7 +39,7 @@ else
 
 	elif [ `uname` == "MINGW64_NT-6.1" ] ; then # TODO
 		ldflags=""
-		libs="-lglfw3.dll" # -lgdi32 -lpthreads -lglfw3  -l /usr/lib/libglfw3.a -lvulkan-1
+		libs="-lglfw3" # -lgdi32 -lpthreads -lglfw3  -l /usr/lib/libglfw3.a -lvulkan-1
 		libDir="-L /c/usr/lib/"
 		inc_spec="-I /c/usr/include/ -I /c/usr/include/stb"
 
@@ -78,7 +78,7 @@ else
 	printf "Compiling...\t\t${COLOR_NONE}"
 	if [ $compiled == 0 ] ; then
 		printf "${COLOR_SUCCESS}Done\n\n${COLOR_NONE}"
-		if [ $1 != "co" ]; then
+		if [[ $1 != "co" ]]; then
 			./$bin
 		fi
 	else
