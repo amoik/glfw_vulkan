@@ -39,8 +39,8 @@ else
 
 	elif [ `uname` == "MINGW64_NT-6.1" ] ; then # TODO
 		ldflags=""
-		libs="-lglfw3" # -lgdi32 -lpthreads -lglfw3  -l /usr/lib/libglfw3.a -lvulkan-1
-		libDir="-L /c/usr/lib/"
+		libs="-lgdi32 -lglfw3 -lvulkan-1" # -lpthreads
+		libDir="-L /c/usr/lib/ -L /c/Windows/System32/"
 		inc_spec="-I /c/usr/include/ -I /c/usr/include/stb"
 
 
